@@ -1,0 +1,3 @@
+project=buaa_prj
+table=wc_in
+columns=link_id:STRING,date_time:STRING,time_interval:STRING,travel_time:String
