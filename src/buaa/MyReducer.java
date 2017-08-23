@@ -26,6 +26,7 @@ public class MyReducer extends ReducerBase {
 	@Override
 	public void reduce(Record key, Iterator<Record> values, TaskContext context)
 			throws IOException {
+		System.out.println(MyDriver.baseHour);
 		String link=key.get(0).toString();
 		String[] ktime= new String[153];
 		Calendar c = Calendar.getInstance();

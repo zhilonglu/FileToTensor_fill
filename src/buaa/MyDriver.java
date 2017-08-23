@@ -10,7 +10,7 @@ import com.aliyun.odps.mapred.utils.SchemaUtils;
 
 
 public class MyDriver {
-
+	public static String baseHour = "" ;
 	public static void main(String[] args) throws OdpsException {
 		JobConf job = new JobConf();
 
@@ -23,7 +23,7 @@ public class MyDriver {
 				job);
 		OutputUtils.addTable(TableInfo.builder().tableName(args[1]).build(),
 				job);
-
+		baseHour = args[0];
 		// TODO: specify a mapper
 		job.setMapperClass(MyMapper.class);
 		// TODO: specify a reducer
